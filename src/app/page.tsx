@@ -6,7 +6,7 @@ import HowItWorks from "./components/HowItWorks";
 import Detection from "./components/Detection";
 import AlertFlow from "./components/AlertFlow";
 import Scenarios from "./components/Scenarios";
-import Comparison from "./components/Comparison";
+import Impact from "./components/Impact";
 import Closing from "./components/Closing";
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
         <Detection />
         <AlertFlow />
         <Scenarios />
-        <Comparison />
+        <Impact />
         <Closing />
       </main>
     </>
