@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "1 in 4", label: "adults over 65 fall each year", color: "accent" },
-  { value: "37%", label: "can't get up without help", color: "coral" },
-  { value: "95%", label: "of hip fractures from falls", color: "accent" },
+  { value: "1 in 3", label: "elderly aged 65+ in Singapore fall each year", color: "accent" },
+  { value: "40%", label: "of injury-related deaths in Singapore are from falls", color: "coral" },
+  { value: "85%", label: "of elderly trauma cases in emergency departments are falls", color: "accent" },
 ];
 
 export default function Problem() {
@@ -29,12 +29,13 @@ export default function Problem() {
             Falls are the{" "}
             <span className="text-gradient-warm">#1 cause</span>
             <br />
-            of injury in older adults
+            of injury in older Singaporeans
           </h2>
-          <p className="mt-6 text-lg text-muted max-w-xl mx-auto leading-relaxed">
-            Most elderly people living alone can&apos;t depend on neighbors or family
-            for immediate help. A fall can leave someone on the ground for hours
-            — unable to reach a phone, unable to call out.
+          <p className="mt-6 text-lg text-muted max-w-2xl mx-auto leading-relaxed">
+            In Singapore, elderly residents living alone are increasingly at risk.
+            Falls happen at home — in bathrooms, kitchens, corridors — and too
+            often, no one is around to notice. Some are only discovered after
+            hours or even days.
           </p>
         </motion.div>
 
@@ -67,7 +68,7 @@ export default function Problem() {
           transition={{ delay: 0.8 }}
           className="mt-10 text-center text-xs text-muted/50"
         >
-          Source: CDC &amp; National Council on Aging
+          Sources: Singapore MOH, Health Promotion Board &amp; Singapore Medical Journal
         </motion.p>
       </div>
     </section>
