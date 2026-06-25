@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, useRef, useState } from "react";
+import { Suspense, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, useGLTF, Environment, ContactShadows } from "@react-three/drei";
 import { motion } from "framer-motion";
@@ -8,7 +8,7 @@ import { RotateCcw } from "lucide-react";
 import * as THREE from "three";
 
 function Model() {
-  const { scene } = useGLTF("/models/base_basic_shaded.glb");
+  const { scene } = useGLTF("/models/bracelet.glb");
   const ref = useRef<THREE.Group>(null);
 
   useFrame((_, delta) => {
@@ -24,20 +24,13 @@ function Model() {
   );
 }
 
+useGLTF.preload("/models/bracelet.glb");
+
 function Loader() {
-  const [dots, setDots] = useState("");
-
-  useState(() => {
-    const interval = setInterval(() => {
-      setDots((d) => (d.length >= 3 ? "" : d + "."));
-    }, 400);
-    return () => clearInterval(interval);
-  });
-
   return (
     <div className="absolute inset-0 flex flex-col items-center justify-center">
       <div className="w-10 h-10 border-2 border-accent/20 border-t-accent rounded-full animate-spin mb-4" />
-      <p className="text-sm text-muted">Loading 3D model{dots}</p>
+      <p className="text-sm text-muted">Loading model...</p>
     </div>
   );
 }
